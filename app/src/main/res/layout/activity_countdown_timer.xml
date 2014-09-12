@@ -151,7 +151,6 @@
     
     <TextView
         android:id="@+id/activity_countdown_timer_note"
-		android:layout_below="@id/activity_cardinal_logo"
         android:layout_above="@id/activity_countdown_wheels_layout"
         android:textColor="@color/gray_text"
         android:tag="Light"

@@ -121,6 +121,7 @@ public class CountdownTimerActivity extends Activity {
 			@Override
 			public void onFinish() {
 				Logger.d(TAG, "Timer Finished...");
+				// This is where you would launch the activity for 
 				closeActivity();
 			}
 		}.start();

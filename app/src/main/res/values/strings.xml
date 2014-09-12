@@ -3,9 +3,9 @@
 
     <string name="app_name">Countdown Timer</string>
 	<string name="content_description">Content Description</string>
-    <string name="countdown_note">Thanks for checking out the Countdown Timer developed by Cardinal
-		Solutions.\n\nThis timer is ideal for use in counting down an event start date, down to
-		the second!!  Feel free to use it in your app.</string>
+    <string name="countdown_note">Thanks for checking out the Countdown Timer.\n\nThis timer is
+		ideal for use in counting down an event start date, down to the second!!  Feel free to
+		use it in your app.</string>
     <string name="days">days</string>
     <string name="hours">hrs</string>
     <string name="minutes">mins</string>
