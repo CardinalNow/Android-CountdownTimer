@@ -4,7 +4,7 @@
 
 This is an activity that performs a countdown to a specified target date/time.  In my usage, I developed an app that couldn't be viewed util a specific date/time.  So, the countdown timer was my launch activity for that app.  When the countdown expired I simply closed the countdown timer activiy and started the main application activity.
 
-![Countdown Screen](https://github.com/kingws/CountdownTimer/blob/master/img/countdown.png)
+![Countdown Screen](https://github.com/CardinalNow/Android-CountdownTimer/blob/master/img/countdown.png)
 
 ## Usage
 
