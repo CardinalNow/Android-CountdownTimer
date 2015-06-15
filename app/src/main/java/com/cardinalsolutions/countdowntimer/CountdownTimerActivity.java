@@ -40,7 +40,7 @@ public class CountdownTimerActivity extends Activity {
 	int monthDay = 28;
 	// month is zero based...7 == August
 	int month = 7;
-	int year = conferenceTime.year;
+	int year;
 
 	// Values displayed by the timer
 	private int mDisplayDays;
@@ -59,6 +59,9 @@ public class CountdownTimerActivity extends Activity {
 	}
 
 	private void configureViews() {
+		
+		this.conferenceTime.setToNow();
+		this.year = conferenceTime.year;
 
 		this.mCountdownNote = (TextView) findViewById(R.id.activity_countdown_timer_note);
 		this.mDaysWheel = (ProgressWheel) findViewById(R.id.activity_countdown_timer_days);
@@ -69,14 +72,6 @@ public class CountdownTimerActivity extends Activity {
 		this.mHoursLabel = (TextView) findViewById(R.id.activity_countdown_timer_hours_text);
 		this.mMinutesLabel = (TextView) findViewById(R.id.activity_countdown_timer_minutes_text);
 		this.mSecondsLabel = (TextView) findViewById(R.id.activity_countdown_timer_seconds_text);
-
-	}
-
-	private void closeActivity() {
-		// Start your subsequent activity here.  Increasing year so timer will never go away for
-		// demo purposes only.  Remove next 2 lines of code in your app!!
-		year = year + 1;
-		configureConferenceDate();
 
 	}
 
@@ -120,9 +115,10 @@ public class CountdownTimerActivity extends Activity {
 
 			@Override
 			public void onFinish() {
+				//TODO: this is where you would launch a subsequent activity if you'd like.  I'm currently just setting the seconds to zero
 				Logger.d(TAG, "Timer Finished...");
-				// This is where you would launch the activity for 
-				closeActivity();
+				CountdownTimerActivity.this.mSecondsWheel.setText("0");
+	        		CountdownTimerActivity.this.mSecondsWheel.setProgress(0);
 			}
 		}.start();
 	}
